@@ -303,10 +303,12 @@ nav{
 .our-services .icon {
     color: #ff305b;
     font-size: 25px;
-    height: 55px;
-    margin-bottom: 10px;
-    transition:font-size .3s ease-in;
+    margin-bottom: 20px;
+    transition:transform .3s ease-in;
     /* -webkit-transition: font-size .3s; */
+}
+.our-services .service:hover .icon{
+    transform: scale(1.4);
 }
 
 .our-services .service{
@@ -320,9 +322,6 @@ nav{
     background-color: #fff;
     border-radius: 5px;
     box-shadow:1px 1px 10px 1px #f2f0f0;
-}
-.our-services .service:hover .icon{
-    font-size: 35px;
 }
 .our-services .servic-inner{
     padding: 40px 20px;
@@ -424,6 +423,7 @@ nav{
     font-weight: 600;
     line-height: 1.1;
 }
+/* end testimonial */
 /* start feedback */
 .feedback{
     padding: 70px 0;
