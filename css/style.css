@@ -348,18 +348,23 @@ nav{
     width: 33.333%;
     /* background-color: #ff305b; */
     float: left;
+    padding: 20px;
 }
 .profile .image .image-inner{
-    padding: 30px;
     position: relative;
 }
+.profile .image img{
+    width: 100%;
+    display: block;
+}
 .profile .layer{
-    width: 346px;
-    height: 257px;
     color: #d5062f;
     background-color: rgba(0,0,0,.6);
     position: absolute;
-    bottom:34px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     opacity: 0; 
     transition-property: opacity;
     transition-duration: .5s;
@@ -370,11 +375,8 @@ nav{
      left: 145px;
      top: 215px;
 }
-.profile .image:hover .layer{
+.profile .image-inner:hover .layer{
      opacity: 1;
-}
-.profile .image img{
-    width: 100%;
 }
 .profile .profile-menue {
     /* background-color: #ff305b; */
