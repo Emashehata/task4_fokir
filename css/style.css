@@ -37,16 +37,14 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
+    left: 0;
     background-color: #333;
-    width: 100%;
     z-index: 1000;
 }
 .fokir .logo{
-    width: 200px;
+    width:  20%;
     float: left;
-    padding: 10px  0;
-     margin-left: 175px; 
-    
+    padding: 10px  0;   
 }
 .fokir .logo a{ 
     color: #ff305b;
@@ -56,16 +54,15 @@ nav{
 }
 
 .fokir .nav-links{
-    /* background-color: #ff305b; */
     float: right;
-    width: 44%;
+    width: 45%;
 }
 .fokir .nav-links ul{
     padding: 15px 0;
 }
 .fokir .nav-links li{
     display: inline; 
-    padding-right:15px;
+    padding-right:23px;
     
 }
 
@@ -85,13 +82,14 @@ nav{
 
 /* end of navbar */
 /* start home caption */
-.parent-home-cap{
-    overflow: auto;
-}
+
 .home-cap{
     text-align: center;
     color: #ffffff;
-    margin-top: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .home-cap h3{
     font-weight: 600;
@@ -113,75 +111,62 @@ nav{
 /* end of home page */
 /* start of section hello */
 .hello{
-    padding: 70px 0 140px 0;
+    padding: 70px 0;
 }
 .hello-cap{
-    width: 44%;
+    width: 46%;
     float: left;
-    position: relative;
-    /* left: 20px; */
-    right: 100px;
+    transform: translateX(100px);
+    
 }
 .hello-img-parent{
-    width: 55%;
-    height: 458px;
+    width: 30%;
     float: left;
-    overflow: hidden;
-    
+    margin-left: 100px;
+    border: 8px solid #555 ;
+    border-radius: 5px;
 }
 .hello-img-child{
     position: relative;
-    border: 8px solid #555 ;
-    border-radius: 5px;
-    width:  55%;
-    height: 400px;
-    left: 100px;
-    
+    transform: translate(24px,24px); 
+    overflow: hidden;
 }
 .hello-img-parent img{
-
+    display: block;
     width: 100%;
     border-radius: 5px;
-    position: absolute;
-    left:25px;
-    top:20px;
 }
 
 .hello-icons{
     width: 100%;
-    height:  430px;
+    height:  100%;
+    top: 100%;
     background-color:  rgba(0,0,0,.4);
     position: absolute;
     border-radius: 5px;
-    left: 25px;
-    top: 20px;
     color: #fff;
-    transform: translateY(100%);
-    transition: transform .5s;
-    
+    transition: top 1s; 
 }
 .hello-img-child:hover .hello-icons{
-    transform: translateY(0%);
+    top: 0;
 }
 .hello-icons ul{
-    width: fit-content;
-    margin: auto;
-    margin-top: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
 }
 .hello-img-parent .hello-icons li{
     float: left;
-    padding: 10px;
-    font-size: 20px; 
+    padding: 5px;
+    font-size: 18px; 
     transition-property: color;
     transition-duration: .5s;
     transition-delay: 0s; 
 }
 .hello-img-parent .hello-icons li:hover{
     color: #FF305B;
-}
-
-.hello-cap{
-    /* background-color: aquamarine; */
 }
 .hello-cap  h2{
     font-size: 34px;
@@ -214,7 +199,7 @@ nav{
     color: #555555;
     font-weight: 400;
     line-height: 1;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
 }
 .hello-cap li span{
     color: black;
@@ -250,8 +235,7 @@ nav{
 .our-services{
     padding: 70px 0;
     text-align: center;
-    background-color: #F1F1F1;
-    
+    background-color: #F1F1F1; 
 }
 .our-services .service-title h2,.profile .prfile-title h2,.feedback .feedback-title h2,.blog .blog-header h2,
 .contact .contact-header h2
@@ -295,11 +279,6 @@ nav{
     padding: 4px 0 5px;
     width: 140px;
 }
-.our-services .services{
-     
-    width: 95%;
-    margin: auto;
-}
 .our-services .icon {
     color: #ff305b;
     font-size: 25px;
@@ -315,7 +294,6 @@ nav{
     width: 25%;
     float: left;
     text-align: center;
-    height: 270px;
     transition:all .3s ease-in ;
 }
 .our-services .service:hover{
@@ -346,12 +324,12 @@ nav{
 }
 .profile .image{
     width: 33.333%;
-    /* background-color: #ff305b; */
     float: left;
-    padding: 20px;
+    margin-bottom: 30px;
 }
 .profile .image .image-inner{
     position: relative;
+    width: 90%;
 }
 .profile .image img{
     width: 100%;
@@ -542,13 +520,14 @@ nav{
 .blog .blog-item{
     width: 33.333%;
     float: left;
-    padding: 25px;
+    /* padding: 25px; */
 }
 .blog .blog-img img,.blog .blog-img iframe{
     width: 100%;
 }
 .blog .blog-inner{
     background-color: #fff;
+    width: 90%;
 }
 .blog .blog-cap{
     padding: 20px;
@@ -654,20 +633,21 @@ button:hover{
     padding:45px 0;
     color: #F1F1F1;
 }
-.footer .footer-icons,.footer .footer-cap{
-    width: fit-content;
-    margin: auto;
+.footer .footer-cap{
+    text-align: center;
     padding: 5px 0;
 }
 .footer .footer-icons {
+    /* background-color: #FF305B; */
      font-size: 16px;
+     transform: translateX(44.5%);
 }
 .footer .footer-icons li:hover{
     color: #ff305b;
 }
 .footer .footer-icons li{
     float: left;
-    padding: 7px;
+    padding: 10px;
     transition-property: color;
      transition-duration: .5s;
      transition-delay: 0s; 
