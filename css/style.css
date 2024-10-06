@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Roboto Condensed", sans-serif;
+     
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Source Code Pro", monospace;
@@ -21,7 +23,7 @@ p{
     color: #555;
 }
 .container{
-    width: 80%;
+    width: 75%;
     margin: auto;
 }
 /* home page */
@@ -36,13 +38,12 @@ p{
 nav{
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
     background-color: #333;
     z-index: 1000;
 }
 .fokir .logo{
-    width:  20%;
+    width:  10%;
     float: left;
     padding: 10px  0;   
 }
@@ -55,14 +56,14 @@ nav{
 
 .fokir .nav-links{
     float: right;
-    width: 45%;
+    width: 50%;
 }
 .fokir .nav-links ul{
     padding: 15px 0;
 }
 .fokir .nav-links li{
     display: inline; 
-    padding-right:23px;
+    padding: 13px;
     
 }
 
@@ -72,6 +73,9 @@ nav{
     letter-spacing: 0.5px;
     transition-property: color;
     transition-duration: 1s;
+}
+.fokir .nav-links ul li a span{
+    color: #d5062f
 }
 .fokir .nav-links ul li a:hover{
       color: #ff305b;
@@ -89,7 +93,7 @@ nav{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
 }
 .home-cap h3{
     font-weight: 600;
@@ -138,17 +142,20 @@ nav{
 }
 
 .hello-icons{
-    width: 100%;
-    height:  100%;
-    top: 100%;
+    
     background-color:  rgba(0,0,0,.4);
     position: absolute;
     border-radius: 5px;
     color: #fff;
-    transition: top 1s; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all .5s;
 }
 .hello-img-child:hover .hello-icons{
-    top: 0;
+    transform: translateY(0);
 }
 .hello-icons ul{
     position: absolute;
@@ -211,6 +218,7 @@ nav{
     display: inline-block;
     margin-right: 10px;
     padding: 13px 26px;
+    transition: all .5s;
 }
 .btn1 a:after {
     font-family: "Font Awesome 6 Free";
@@ -228,6 +236,9 @@ nav{
     vertical-align: middle;
     font-weight: 900;
  }
+.btn:hover{
+   background-color: #D50631;
+}
  
 
 /* end of section hello */
@@ -248,6 +259,7 @@ nav{
     margin-bottom: 40px;
     position: relative;
     word-spacing: -16px;
+    text-align: center;
 }
 .our-services .service-title h2::before,.profile .prfile-title h2::before,.feedback h2::before,.blog .blog-header h2::before
 ,.contact .contact-header h2::before
@@ -320,16 +332,16 @@ nav{
 /* start profile */
 .profile{
     padding: 70px 0;
-    text-align: center;
 }
+
 .profile .image{
-    width: 33.333%;
+    width: 33.3333%;
     float: left;
-    margin-bottom: 30px;
+    padding: 20px 0;
+    padding-right: 30px;
 }
 .profile .image .image-inner{
     position: relative;
-    width: 90%;
 }
 .profile .image img{
     width: 100%;
@@ -349,18 +361,18 @@ nav{
 }
 .profile .layer .icon{
      font-size: 20px;
-     position: relative;
-     left: 145px;
+     position: absolute;
+     left: 300px;
      top: 215px;
 }
 .profile .image-inner:hover .layer{
      opacity: 1;
 }
 .profile .profile-menue {
-    /* background-color: #ff305b; */
     width: fit-content;
     margin: auto;
     padding:10px 0;
+    margin-bottom: 15px;
 }
 .profile .profile-menue ul li{
     float: left;
@@ -372,6 +384,9 @@ nav{
     font-weight: 400;
     letter-spacing: 1px;
     padding: 3px 12px;
+}
+.profile .profile-menue ul li a span{
+    color: #d5062f;
 }
 /* end profile */
 /* start testimonial */
@@ -606,7 +621,7 @@ nav{
 .comment{
     width: 100%;
     height: 80px;
-    resize: both;
+    resize: none;
 }
 .name{
     margin-right:4% ;
@@ -640,7 +655,8 @@ button:hover{
 .footer .footer-icons {
     /* background-color: #FF305B; */
      font-size: 16px;
-     transform: translateX(44.5%);
+     width: fit-content;
+     margin: auto;
 }
 .footer .footer-icons li:hover{
     color: #ff305b;
